@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color: #efefef;">
     <header>
         <!--Inicio del menú-->
         <div class="container">
@@ -35,18 +35,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Sign up</a>
                                     </li>
-                                    <!--Inicio del Dropdown-->
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Dropdown
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -70,31 +58,47 @@
                         <label for="username">
                             Nombre:
                         </label>
-                        <input type="text" id="username" placeholder="Ingrese su nombre..." class="form-control" autofocus>
+                        <input type="text" id="username" placeholder="Ingrese su nombre..." class="form-control"
+                            autofocus>
                     </div>
                     <div class="form-group">
                         <label for="userlastname">Apellido:</label>
                         <input type="text" id="userlastname" placeholder="Ingrese su apellido" class="form-control">
                     </div>
+                    <!--Inicio del Dropdown-->
+                    <div class="dropdown dropup mt-4">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Continents
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">America</a></li>
+                            <li><a class="dropdown-item" href="#">Asia</a></li>
+                            <li><a class="dropdown-item" href="#">Africa</a></li>
+                            <li><a class="dropdown-item" href="#">Atlantic</a></li>
+                            <li><a class="dropdown-item" href="#">Europe</a></li>
+                        </ul>
                 </form>
-            </div>
-        </div>
-
-
-        <!--Inicio botones-->
-        <div class="row justify-content-end mt-3">
-            <div class="col-md-2 col-sm-2 col-xs-2 ">
-                <a href="./tarea1v2.html" class="btn btn-outline-primary">Next</a>
             </div>
         </div>
     </div>
 
 
+    <!--Inicio botones-->
+    <div class="row justify-content-end my-3">
+        <div class="col-md-2 col-sm-2 col-xs-2 ">
+            <a href="./tarea1v2.html" class="btn btn-outline-primary">Next</a>
+        </div>
+    </div>
+    </div>
 
 
     <script src="./js/bootstrap.bundle.js"></script>
-    <script src="./js/bootstrap.esm.js"></script>
+    <!--<script src="./js/bootstrap.esm.js"></script>
     <script src="./js/bootstrap.js"></script>
+    <script src="./js/"></script>
+    <script src="./js/bootstrap.js"></script>-->
+
 </body>
 
 </html>
