@@ -36,8 +36,8 @@ class plantilla {
         <nav>
 
         <ul>
-            <li><a href="'. $origen .'/controlador_inicio.php">Inicio</a></li>
-            <li><a href="'. $origen .'/user/controlador_admin_user.php">Usuario</a></li>
+            <li><a href="'.$origen.'/controller_inicio.php">Inicio</a></li>
+            <li><a href="'.$origen.'/user/controller_admin_user.php">Usuario</a></li>
             <li><a href="#">Clientes</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Herramientas</a></li>
@@ -54,7 +54,7 @@ class plantilla {
         return '    
         <section>
 
-        ". $contenido ."
+        '.$contenido.'
 
     </section>';
     }

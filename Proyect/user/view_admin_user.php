@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <? echo $modelo->ObtenerCabecera($origen); ?>
+    <?php echo $modelo->ObtenerCabecera($origen); ?>
 </head>
 <body>
 
@@ -14,10 +14,10 @@
     </center>";
     ?>
 
-    <? echo $modelo->ObtenerEncabezado($origen); ?>
-    <? echo $modelo->ObtenerMenu($origen); ?>
-    <? echo $modelo->ObtenerCuerpo($origen, $contenido); ?>
-    <? echo $modelo->ObtenerPieDePagina($origen); ?>
+    <?php echo $modelo->ObtenerEncabezado($origen); ?>
+    <?php echo $modelo->ObtenerMenu($origen); ?>
+    <?php echo $modelo->ObtenerCuerpo($origen, $contenido); ?>
+    <?php echo $modelo->ObtenerPieDePagina($origen); ?>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 // Incluye el archivo que define la clase plantilla
-include "'. $origen .'/config/model_plantilla.php";
+include "./config/model_plantilla.php";
 
 // Crea una instancia de la clase plantilla
 $modelo = new plantilla();
@@ -9,5 +9,5 @@ $modelo = new plantilla();
 $origen = "."; // Por ejemplo, define $origen según tus necesidades
 
 // Incluye la vista después de haber inicializado todas las variables necesarias
-include "'. $origen .'/view_inicio.php";
+include "./view_inicio.php";
 ?>
