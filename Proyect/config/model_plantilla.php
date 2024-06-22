@@ -21,7 +21,7 @@ class plantilla {
         <table border="0" style="width: 100%;" cellpadding="0" cellspacing="0">
             <tr>
                 <td style="width: 150px;"><img src="'. $origen .'/img/logo.jpeg" style="width: 60px;"></td>
-                <td style="text-align: left;font-size: 30px;">San Miguel Technology</td>
+                <td style="text-align: left;font-size: 30px;">Fofita\'s store</td>
             </tr>
         </table>
 
