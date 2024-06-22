@@ -28,8 +28,9 @@
                     <table border='0' style='width: 100%;' cellpadding = '15'>
                         <tr>
                             <td>
-                                <img src='". $origen ."/img/search.png' alt=''>
-                                Criterio de busqueda: <input type='text' name='criterio' value= '". $criterio ."' style='width: 250px;' autofocus>
+                                <img src='". $origen ."/img/search.png' alt='' style='width: 15px;'>
+                                Criterio de busqueda:<br>
+                                <input type='text' name='criterio' value= '". $criterio ."' style='width: 250px;' autofocus>
                             </td>
                             <td>
                                 <input type='submit' value='Buscar' style='width: 150px;'>
