@@ -17,38 +17,29 @@
 
     $user_type = "";
     $user_status = "";
-    $contenido = "
-    <center>
-        <br><br><br><br><br>
+    $contenido = '
+    <div style="padding: 0px 50px 50px 50px;">
+        <nav class="navbar navbar-light bg-white m-3">
+            <div class="container-fluid justify-content-betweeng">
+            <h3>Tabla Users</h3>
+            <form class="d-flex  ">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="criterio" value= "'. $criterio .'" style="width: 250px;" autofocus>
+                <button class="btn btn-outline-success" type="submit"  value="Buscar" >Search</button>
+            </form>
+            </div>
+        </nav>
         
-        <table border = '1' cellpadding='10' cellspacing='0' >
-        <tr>
-            <td colspan='6'>
-                <form name='searchuser' action='". $_SERVER['PHP_SELF'] ."' method='GET'>
-                    <table border='0' style='width: 100%;' cellpadding = '15'>
-                        <tr>
-                            <td>
-                                <img src='". $origen ."/img/search.png' alt='' style='width: 15px;'>
-                                Criterio de busqueda:<br>
-                                <input type='text' name='criterio' value= '". $criterio ."' style='width: 250px;' autofocus>
-                            </td>
-                            <td>
-                                <input type='submit' value='Buscar' style='width: 150px;'>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-            </td>
-        </tr>
-
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>User name</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th>Options</th>
-            </tr>";
+        <center>
+            <table border = "" cellpadding="15" cellspacing="5"  class="table table-hover" >
+                <tr style="text-align: center;">
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>User name</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Options</th>
+                </tr>
+                ';
 
     $sql = " SELECT name, user_name, type, status from user  ";
 
@@ -76,11 +67,11 @@
             }
             $contenido .= '
             <tr>
-                <td style="text-align: center; width: 50px;">' . $counter . '</td>
-                <td style="text-align: center; width: 250px;">' . $fila["name"] . '</td>
-                <td style="text-align: center; width: 150px;">' . $fila["user_name"] . '</td>
-                <td style="text-align: center; width: 150px;">' . $user_type . '</td>
-                <td style="text-align: center; width: 100px;">' . $user_status . '</td>
+                <td style="text-align: center; ">' . $counter . '</td>
+                <td style="text-align: center; ">' . $fila["name"] . '</td>
+                <td style="text-align: center; ">' . $fila["user_name"] . '</td>
+                <td style="text-align: center; ">' . $user_type . '</td>
+                <td style="text-align: center; ">' . $user_status . '</td>
             </tr>
             ';
 
@@ -97,7 +88,8 @@
     $contenido .= "
         </table>
         </center>
-        <br><br><br><br><br>";
+        </div>
+        ";
     ?>
 
     <?php echo $modelo->ObtenerEncabezado($origen); ?>
@@ -106,5 +98,5 @@
     <?php echo $modelo->ObtenerPieDePagina($origen); ?>
 
 </body>
-
+    <?php echo $modelo->ObtenerBootsTrap($origen); ?>
 </html>

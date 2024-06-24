@@ -20,4 +20,5 @@
     <?php echo $modelo->ObtenerPieDePagina($origen); ?>
 
 </body>
+    <?php echo $modelo->ObtenerBootsTrap($origen); ?>
 </html>
