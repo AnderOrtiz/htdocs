@@ -18,7 +18,7 @@
     $user_type = "";
     $user_status = "";
     $contenido = '
-    <div style="padding: 0px 50px 50px 50px;">
+    <div class="container-fluid">
         <nav class="navbar navbar-light bg-white m-3">
             <div class="container-fluid justify-content-betweeng">
             <h3>Tabla Users</h3>
@@ -30,15 +30,27 @@
         </nav>
         
         <center>
-            <table border = "" cellpadding="15" cellspacing="5"  class="table table-hover" >
-                <tr style="text-align: center;">
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>User name</th>
-                    <th>Type</th>
-                    <th>Status</th>
-                    <th>Options</th>
-                </tr>
+                
+                <div class="row d-flex flex-wrap container-fluid">
+                    <div class=" col-md-1 col-sm-1 col-1">
+                        #
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-3 ">
+                        name
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-3 ">
+                        username
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-3 ">
+                        Type
+                    </div>  
+                    <div class="col-md-2 col-sm-3 col-2">
+                        Status
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12 bg-light">
+                        Tools
+                    </div>
+                </div>
                 ';
 
     $sql = " SELECT name, user_name, type, status from user  ";
@@ -66,13 +78,28 @@
                 $user_status = "deactive";
             }
             $contenido .= '
-            <tr>
-                <td style="text-align: center; ">' . $counter . '</td>
-                <td style="text-align: center; ">' . $fila["name"] . '</td>
-                <td style="text-align: center; ">' . $fila["user_name"] . '</td>
-                <td style="text-align: center; ">' . $user_type . '</td>
-                <td style="text-align: center; ">' . $user_status . '</td>
-            </tr>
+            
+                <div class="row d-flex flex-wrap container-fluid" style="border:black solid 1px;">
+                    <div class="col-md-1 col-sm-1 col-1 bg-dark" style="color: white;">
+                        ' . $counter . '
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-3 ">
+                        ' . $fila["name"] . '
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-3 ">
+                        ' . $fila["user_name"] . '
+                    </div>
+                    <div class="col-md-2 col-sm-3 col-3 ">
+                        ' . $user_type . '
+                    </div>  
+                    <div class="col-md-2 col-sm-3 col-2 ">
+                        ' . $user_status . '
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-12 bg-light">
+                        Tools
+                    </div>
+                </div>
+
             ';
 
             $counter = $counter + 1;
@@ -80,15 +107,14 @@
     } else {
         $contenido .= "
         <tr>
-            <td colspan='6' style='text-align: center;'>NO SE ENCONTRARON REGISTROS</td>
+            <td colspan='6' style='text-align: left;'>NO SE ENCONTRARON REGISTROS</td>
         </tr>
         ";
     }
 
     $contenido .= "
-        </table>
         </center>
-        </div>
+            </div>
         ";
     ?>
 

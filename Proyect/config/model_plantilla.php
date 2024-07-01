@@ -9,8 +9,7 @@ class plantilla
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Proyect</title>
-        <link rel="stylesheet" href="' . $origen . '/css/styles.css">
-        <link rel="stylesheet" href="' . $origen . '/css/bootstrap.css">
+        <link rel="stylesheet" href="' . $origen . '/css/bootstrap.css">    
         ';
     }
 
@@ -27,25 +26,30 @@ class plantilla
                         Fofita\'s store
                     </a>
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="' . $origen . '/controller_inicio.php">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page"
-                                    href="' . $origen . '/user/controller_admin_user.php">User</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Client</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Tools</a>
-                            </li>
-                        </ul>
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="' . $origen . '/controller_inicio.php">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="' . $origen . '/user/controller_admin_user.php">User</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="' . $origen . '/controller_inicio.php">Client</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="' . $origen . '/controller_inicio.php">Product</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="' . $origen . '/controller_inicio.php">Tools</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                     </nav>
                 </div>
             </nav>
@@ -82,7 +86,7 @@ class plantilla
         <footer>
         <center>
             <h6>
-                <hr style="width: 80% ;">
+            <br>
                 All rights reserved &copy; <br>
                 Class project, third year of software, 2024
             </h3>
@@ -93,9 +97,9 @@ class plantilla
     public function ObtenerBootsTrap($origen)
     {
         return '
-        <!--<script src="../js/bootstrap.popper.min.js"></script>-->
-        <script src="../js/bootstrap.min.js"></script>
-        <!-- <script src="../js/bootstrap.bundle.min.js"></script>-->
+        <script src="' . $origen . '/js/bootstrap.min.js"></script> 
+        <!--<script src="' . $origen . '/js/bootstrap.popper.min.js"></script>-->
+        <!-- <script src="' . $origen . '/js/bootstrap.bundle.min.js"></script>-->
         ';
     }
 }
