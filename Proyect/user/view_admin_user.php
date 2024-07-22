@@ -38,16 +38,16 @@
                     <div class="col-md-2 col-sm-3 col-3 ">
                         name
                     </div>
-                    <div class="col-md-2 col-sm-2 col-3 ">
+                    <div class="col-md-2 col-sm-2 col-4 ">
                         username
                     </div>
-                    <div class="col-md-2 col-sm-3 col-3 ">
+                    <div class="col-md-2 col-sm-3 col-4 ">
                         Type
                     </div>  
-                    <div class="col-md-2 col-sm-3 col-2">
+                    <div class="col-md-2 col-sm-3 col-6">
                         Status
                     </div>
-                    <div class="col-md-3 col-sm-12 col-12 bg-light">
+                    <div class="col-md-3 col-sm-3 col-6">
                         Tools
                     </div>
                 </div>
@@ -79,24 +79,24 @@
             }
             $contenido .= '
             
-                <div class="row d-flex flex-wrap container-fluid" style="border:black solid 1px;">
+                <div class="row d-flex flex-wrap container-fluid" style=" padding:;">
                     <div class="col-md-1 col-sm-1 col-1 bg-dark" style="color: white;">
                         ' . $counter . '
                     </div>
                     <div class="col-md-2 col-sm-3 col-3 ">
                         ' . $fila["name"] . '
                     </div>
-                    <div class="col-md-2 col-sm-2 col-3 ">
+                    <div class="col-md-2 col-sm-2 col-4 ">
                         ' . $fila["user_name"] . '
                     </div>
-                    <div class="col-md-2 col-sm-3 col-3 ">
+                    <div class="col-md-2 col-sm-3 col-4 ">
                         ' . $user_type . '
                     </div>  
-                    <div class="col-md-2 col-sm-3 col-2 ">
-                        ' . $user_status . '
+                    <div class="col-md-2 col-sm-3 col-6 ">
+                    ' . $user_status . '
                     </div>
-                    <div class="col-md-3 col-sm-12 col-12 bg-light">
-                        Tools
+                    <div class="col-md-3 col-sm-12 col-6 bg-light">
+                    Tool
                     </div>
                 </div>
 

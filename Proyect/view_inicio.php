@@ -31,14 +31,14 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./img/0130.jpg" class="d-block w-100 difuminado" alt="...">
+                <img src="./img/0131.jpg" class="d-block w-100 difuminado" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
                     <p>Some representative placeholder content for the second slide.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./img/0132.jpg" class="d-block w-100 difuminado" alt="...">
+                <img src="./img/0130.jpg" class="d-block w-100 difuminado" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
                     <p>Some representative placeholder content for the third slide.</p>
