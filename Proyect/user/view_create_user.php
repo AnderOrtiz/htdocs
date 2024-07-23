@@ -64,7 +64,7 @@
                     <input type="password" class="form-control" id="password" name="password" maxlength="64" value="'.$contrasena.'" required>
                 </div>
                 <div class="form-group text-right">
-                <a href="controlador_usuarios.php"><button type="button" class="btn btn-secondary">Cancelar</button></a>
+                <a href="controller_admin_user.php"><button type="button" class="btn btn-secondary">Cancelar</button></a>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
 

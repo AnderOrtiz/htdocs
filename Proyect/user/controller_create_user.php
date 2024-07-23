@@ -37,6 +37,7 @@ if ($_POST) {
     $correo = $_POST["email"] ?? ""; // Añadir esto si el correo es parte del formulario
     $tipo = $_POST["type"] ?? "";
     $contrasena = $_POST["password"] ?? ""; // Añadir esto si la contraseña es parte del formulario
+    $estado = 'active'; // Asignar el estado activo por defecto
 
     if ($id_usuario == "") {
         $Verificar = "SELECT user_name FROM user WHERE user_name ='" . $usuario . "' LIMIT 1";
@@ -83,31 +84,29 @@ if ($_POST) {
         $conexion->cerrar();
 
 
-    } else if ($id_usuario != "") {//AAa
 
+    } else if ($id_usuario != "") { // Asegúrate de que esta condición se cumple
 
-        $Modificar = "UPDATE clientes SET name = '$nombre',
+        $Modificar = "UPDATE user SET 
+        name = '$nombre',
         user_name = '$usuario',
         email = '$correo',
         type = '$tipo',
-        password = '$contrasena'
+        password = '$contrasena'                    
         WHERE id = '$id_usuario'";
 
-        
-
-            // Ejecutar la consulta
-            if ($conexion->consultar($Modificar)) {
-                echo "
-                    <script>
-                    alert('Actualización exitosa');
-                    window.top.location.replace('controller_admin_user.php');
-                    </script>";
-                            } else {
-                                echo "
-                    <script>
-                    alert('Error');
-                    window.top.location.replace('controller_admin_user.php');
-                    </script>";
+        if ($conexion->consultar($Modificar)) {
+            echo "
+                <script>
+                alert('Actualización exitosa');
+                window.top.location.replace('controller_admin_user.php');
+                </script>";
+        } else {
+            echo "
+                <script>
+                alert('Error: no actualizado');
+                window.top.location.replace('controller_admin_user.php');
+                </script>";
         }
     }
 }
