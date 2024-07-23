@@ -22,7 +22,7 @@
         <nav class="navbar navbar-light bg-white m-3">
             <div class="container-fluid justify-content-betweeng">
             <h3>Tabla Users</h3>
-            <a href="./controller_create_user.php"><button class="btn btn-outline-success" value="Create">New</button></a>
+            <a href="./controller_create_user.php"><button class="btn btn-outline-success" value="Create" >New</button></a>
             <form class="d-flex  ">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="criterio" value= "'. $criterio .'" style="width: 250px;" autofocus>
                 <button class="btn btn-outline-success" type="submit"  value="Buscar" >Search</button>

@@ -37,24 +37,23 @@
             text-align: right;
         }
     </style>
-</head>
-<body>
+
     <div class="container mt-3">
         <div class="form-container">
             <h2 class="mb-3">Formulario de Usuario</h2>
             <form method="POST" action="' . $_SERVER['PHP_SELF'] . '" enctype="multipart/form-data" onsubmit="" class="formulario">
-            <input type="hidden" name="id_usuario" value="'.$id.'">  
+            <input type="hidden" name="id_usuario" value="'.$id_usuario.'">  
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" maxlength="50" value="'.$name.'" required>
+                    <input type="text" class="form-control" id="name" name="name" maxlength="50" value="'.$nombre.'" required>
                 </div>
                 <div class="form-group">
                     <label for="user_name">User Name</label>
-                    <input type="text" class="form-control" id="user_name" name="user_name" maxlength="50" value="'.$user_name.'" required>
+                    <input type="text" class="form-control" id="user_name" name="user_name" maxlength="50" value="'.$usuario.'" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" maxlength="30" value="'.$email.'" required>
+                    <input type="email" class="form-control" id="email" name="email" maxlength="30" value="'.$correo.'" required>
                 </div>
                 <div class="mb-3">
                     <label for="tipoU" class="form-label">Type</label>
@@ -62,7 +61,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" maxlength="64" value="'.$password.'" required>
+                    <input type="password" class="form-control" id="password" name="password" maxlength="64" value="'.$contrasena.'" required>
                 </div>
                 <div class="form-group text-right">
                 <a href="controlador_usuarios.php"><button type="button" class="btn btn-secondary">Cancelar</button></a>
