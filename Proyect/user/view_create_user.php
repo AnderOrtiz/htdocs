@@ -42,7 +42,10 @@
         <div class="form-container">
             <h2 class="mb-3">Formulario de Usuario</h2>
             <form method="POST" action="' . $_SERVER['PHP_SELF'] . '" enctype="multipart/form-data" onsubmit="" class="formulario">
-            <input type="hidden" name="id_usuario" value="'.$id_usuario.'">  
+            <input type="hidden" name="id_usuario" value="'.$id_usuario.'"> 
+            <div class="form-group">
+                    <label for="name">'.$id_usuario.'</label>
+                </div> 
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" maxlength="50" value="'.$nombre.'" required>

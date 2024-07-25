@@ -31,13 +31,20 @@ if (isset($_GET["idU"])) {
 }
 
 if ($_POST) {
-    $id_usuario = $_POST["id"] ?? "";  // Usar operador de fusión null
-    $nombre = $_POST["name"] ?? "";
-    $usuario = $_POST["user_name"] ?? "";
-    $correo = $_POST["email"] ?? ""; // Añadir esto si el correo es parte del formulario
-    $tipo = $_POST["type"] ?? "";
-    $contrasena = $_POST["password"] ?? ""; // Añadir esto si la contraseña es parte del formulario
-    $estado = 'active'; // Asignar el estado activo por defecto
+    $id_usuario = isset($_POST["id"]) ? $_POST["id"] : "";
+    $id_usuario_copia = $id_usuario; // Crear una copia independiente de $id_usuario
+    $nombre = isset($_POST["name"]) ? $_POST["name"] : "";
+    $usuario = isset($_POST["user_name"]) ? $_POST["user_name"] : "";
+    $correo = isset($_POST["email"]) ? $_POST["email"] : "";
+    $tipo = isset($_POST["type"]) ? $_POST["type"] : "";
+    $contrasena = isset($_POST["password"]) ? $_POST["password"] : "";
+    $estado = 'active';
+
+    // Conexión a la base de datos
+    include('conexion.php'); 
+
+    // Depuración: Mostrar el valor de $id_usuario
+    echo "ID Usuario: $id_usuario";
 
     if ($id_usuario == "") {
         $Verificar = "SELECT user_name FROM user WHERE user_name ='" . $usuario . "' LIMIT 1";
@@ -85,7 +92,7 @@ if ($_POST) {
 
 
 
-    } else if ($id_usuario != "") { // Asegúrate de que esta condición se cumple
+    } else if ($id_usuario != "") { 
 
         $Modificar = "UPDATE user SET 
         name = '$nombre',

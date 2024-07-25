@@ -10,6 +10,8 @@
     <?php
 
     $criterio = "";
+    $uid = "";
+
 
     if(isset($_GET["criterio"])){
         $criterio = $_GET["criterio"];
