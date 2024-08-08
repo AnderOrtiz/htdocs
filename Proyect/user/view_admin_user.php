@@ -78,9 +78,6 @@
                     <div class="col-md-2 col-sm-3 col-4 ">
                         Type
                     </div>  
-                    <div class="col-md-3 col-sm-3 col-12">
-                        Tools
-                    </div>
                 </div>
                 ';
 
@@ -90,6 +87,9 @@
         $sql .= "where user.name like '%". $criterio ."%'
             OR  user.user_name like '%". $criterio ."%'";
     }
+    
+    $sql .= " ORDER BY id DESC";
+    
 
     $query = $conexion->consultar($sql);
 
@@ -98,9 +98,9 @@
         while ($fila = mysqli_fetch_assoc($query)) {
 
             if ($fila["type"] == 1) {
-                $user_type = "admin";
+                $user_type = "Admin";
             } else if ($fila["type"] == 0) {
-                $user_type = "operative";
+                $user_type = "Operative";
             }
 
             if ($fila["status"] == 1) {

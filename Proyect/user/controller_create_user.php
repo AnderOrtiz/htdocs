@@ -32,21 +32,13 @@ if (isset($_GET["idU"])) {
 
 if ($_POST) {
     $id_usuario = isset($_POST["id_usuario"]) ? $_POST["id_usuario"] : "";
-    $id_usuario_copia = $id_usuario; // Crear una copia independiente de $id_usuario
     $nombre = isset($_POST["name"]) ? $_POST["name"] : "";
     $usuario = isset($_POST["user_name"]) ? $_POST["user_name"] : "";
     $correo = isset($_POST["email"]) ? $_POST["email"] : "";
-    $tipo = isset($_POST["type"]) ? $_POST["type"] : "";
+    $tipo = isset($_POST["tipoU"]) ? $_POST["tipoU"] : "";
     $contrasena = isset($_POST["password"]) ? $_POST["password"] : "";
     $estado = 'active';
 
-    // Conexión a la base de datos
-    //include('conexion.php'); 
-
-    // Depuración: Mostrar el valor de $id_usuario
-    //echo "ID Usuario: $id_usuario";
-
-    //echo "<script>alert($id_usuario);</script>";
 
     if ($id_usuario == "") {
         $Verificar = "SELECT user_name FROM user WHERE user_name ='" . $usuario . "' LIMIT 1";
@@ -122,13 +114,17 @@ if ($_POST) {
 }
 
 $nTipos = array("1", "0");
-$aLetrasNiveles = array("Administrador", "Operativo");
+$aLetrasNiveles = array("Admin", "Operative");
 
 $cmbNiveles = "<select name='tipoU' style='width: 200px;' onChange=\"\">";
 $contador = 0;
 
 foreach ($nTipos as $item) {
-    $cmbNiveles .= "<option value='" . $item . "'>" . $aLetrasNiveles[$contador] . "</option>";
+    $cmbNiveles .= "<option value='" . $item . "' ";
+    if($item == $tipo){
+        $cmbNiveles .= " selected ";
+    }
+    $cmbNiveles .= " >" . $aLetrasNiveles[$contador] . "</option>";
     $contador++;
 }
 

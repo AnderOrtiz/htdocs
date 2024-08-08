@@ -43,9 +43,6 @@
             <h2 class="mb-3">Formulario de Usuario</h2>
             <form method="POST" action="' . $_SERVER['PHP_SELF'] . '" enctype="multipart/form-data" onsubmit="" class="formulario">
             <input type="hidden" name="id_usuario" value="'.$id_usuario.'"> 
-            <div class="form-group">
-                    <label for="name">'.$id_usuario.'</label>
-                </div> 
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" maxlength="50" value="'.$nombre.'" required>
@@ -59,7 +56,7 @@
                     <input type="email" class="form-control" id="email" name="email" maxlength="30" value="'.$correo.'" required>
                 </div>
                 <div class="mb-3">
-                    <label for="tipoU" class="form-label">Type</label>
+                    <label for="tipoU" class="form-label" id="type" name="type">Type</label>
                     ' .$cmbNiveles. '
                 </div>
                 <div class="form-group">
